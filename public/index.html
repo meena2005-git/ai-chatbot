@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="BlueBot - Your friendly AI assistant.">
+  <title>BlueBot | AI Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/">
+        <span class="brand-icon">✦</span>
+        <span>BlueBot</span>
+      </a>
+
+      <button class="new-chat" id="newChat">＋ New chat</button>
+
+      <p class="side-label">YOUR ASSISTANT</p>
+      <div class="side-info">
+        <span class="online-dot"></span>
+        <div>
+          <strong>BlueBot AI</strong>
+          <small>Ready to help you</small>
+        </div>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="avatar">B</div>
+        <div>
+          <strong>AI Assistant</strong>
+          <small>Personal workspace</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn"
+          aria-label="Toggle navigation">☰</button>
+        <div class="mobile-brand">✦ BlueBot</div>
+        <span class="model-label">
+          <span class="online-dot"></span> AI Assistant
+        </span>
+      </header>
+
+      <section class="chat-area" id="chatArea"
+        aria-live="polite">
+        <div class="welcome" id="welcome">
+          <div class="hero-icon">✦</div>
+          <p class="eyebrow">YOUR AI COMPANION</p>
+          <h1>Hi there! <span>How can I help?</span></h1>
+          <p class="welcome-text">
+            Ask a question, explore an idea, or learn something new.
+          </p>
+
+          <div class="suggestions">
+            <button class="suggestion"
+              data-prompt="Explain artificial intelligence in simple words">
+              <span>✧</span>
+              <strong>Learn something</strong>
+              <small>Explain a complex topic simply</small>
+            </button>
+            <button class="suggestion"
+              data-prompt="Give me a study timetable for my college exams">
+              <span>▤</span>
+              <strong>Study planner</strong>
+              <small>Organize my study schedule</small>
+            </button>
+            <button class="suggestion"
+              data-prompt="Suggest a beginner-friendly Python project">
+              <span>⌘</span>
+              <strong>Write some code</strong>
+              <small>Find a programming project</small>
+            </button>
+            <button class="suggestion"
+              data-prompt="Give me five creative ideas for a student mini project">
+              <span>✳</span>
+              <strong>Brainstorm ideas</strong>
+              <small>Discover something creative</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea
+            id="messageInput"
+            rows="1"
+            maxlength="4000"
+            placeholder="Message BlueBot..."
+            aria-label="Your message"
+            required></textarea>
+          <button class="send-btn" id="sendBtn"
+            type="submit" aria-label="Send message">↑</button>
+        </form>
+        <p class="disclaimer">
+          BlueBot can make mistakes. Verify important information.
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/script.js" defer></script>
+</body>
+</html>
